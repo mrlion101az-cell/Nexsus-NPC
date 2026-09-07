@@ -1,0 +1,26 @@
+name: NexusNPC
+version: '0.1.0'
+main: com.nexusuniverse.npc.NexusNpcPlugin
+api-version: '1.21'
+author: RealSociety
+description: >
+  An original Citizens/Sentinel-inspired NPC framework: spawn mob-type NPCs (real entities) or
+  player-skinned "Steve" NPCs (packet-based), fetch skins from real player usernames, attach
+  traits (look-at, patrol), and configure it all per-NPC and globally. Part of the Nexus plugin
+  family.
+
+depend: [packetevents]
+
+commands:
+  npc:
+    description: Create and manage NexusNPC NPCs.
+    usage: /npc <create|remove|list|tp|skin|equip|trait> ...
+    permission: nexusnpc.use
+
+permissions:
+  nexusnpc.use:
+    description: Use the base /npc command (create/list/tp your own NPCs).
+    default: op
+  nexusnpc.admin:
+    description: Full NPC management -- remove/edit any NPC, skin/equip/trait management.
+    default: op
